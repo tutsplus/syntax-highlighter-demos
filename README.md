@@ -1,4 +1,4 @@
-### Tuts+ Roundup: 
+### Tuts+ Roundup: Syntax Highlighters
 #### Instructor: Kezz Bracey
 
 When you set out to grab a syntax highlighter for your website, or your favorite IDE, you quickly find there are a lot of options available. Picking which one to use can be a daunting task.
