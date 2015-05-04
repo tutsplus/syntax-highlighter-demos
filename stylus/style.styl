@@ -1,0 +1,48 @@
+@import normalize
+
+$golden = 1.618
+
+*
+	box-sizing: border-box
+	
+body
+	background: #ecf0f1
+	
+a, a:visited, a:link, a:hover, a:active
+	color: #3498db
+	text-decoration: none
+
+a:hover
+	text-decoration: underline
+	
+.wrapper
+	max-width: 75rem
+	width: 100%
+	margin: $golden * 2rem auto
+	&::before,
+	&::after
+		content: " "
+		display: table
+	&::after
+		clear both
+
+.demodisplay
+	float: left
+	width: 65%
+	padding: $golden * 1rem $golden * 2rem
+	background: white
+
+.demolist
+	float: right
+	width: 30%
+	padding: 1.618rem
+	background: #34495e
+	color: white
+	h3, a
+		color: inherit
+
+h2
+	margin-top: $golden * 2rem
+	
+li
+	line-height: 2em

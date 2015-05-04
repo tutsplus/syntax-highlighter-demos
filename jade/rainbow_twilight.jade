@@ -1,0 +1,90 @@
+extends ./layout.jade
+
+block title
+	| Rainbow Demo - Twilight Theme
+
+block highlighter
+	script( src='highlighters/Rainbow/rainbow.min.js' )
+	link( href='highlighters/Rainbow/themes/twilight.css', rel='stylesheet' type='text/css' )
+
+block content
+	h1 
+		block title
+	p Website: 
+		a(href='https://craig.is/making/rainbows', target="_target") https://craig.is/making/rainbows
+
+	h2 HTML
+
+	include ../code_examples/example_html.jade
+	pre
+		code( data-language='html' ) 
+			| #{HTML}
+
+	h2 JavaScript
+
+	pre
+		code( data-language='javascript' )
+			include ../code_examples/example.js
+
+	h2 CSS
+
+	pre
+		code( data-language='css' )
+			include ../code_examples/example.css
+
+	h2 PHP
+
+	include ../code_examples/example_php.jade
+	pre
+		code( data-language='php' )
+			| #{PHP}
+
+	h2 Markdown
+
+	pre
+		code( data-language='markdown' )
+			include ../code_examples/example.md
+
+	h2 CoffeeScript
+
+	pre
+		code( data-language='coffeescript' )
+			include ../code_examples/example.coffee
+
+	h2 Handlebars
+
+	include ../code_examples/example_hbs.jade
+	pre
+		code( data-language='handlebars' )
+			| #{hbs}
+
+	h2 Jade
+
+	pre
+		code( data-language='jade' )
+			include ../code_examples/example_jade.txt
+
+	h2 LESS
+
+	pre
+		code( data-language='less' )
+			include ../code_examples/example.less
+
+	h2 Sass
+
+	pre
+		code( data-language='scss' )
+			include ../code_examples/example.scss
+
+	h2 Stylus
+
+	pre
+		code( data-language='stylus' )
+			include ../code_examples/example.styl
+
+	script( src='highlighters/Rainbow/language/coffeescript.js' )
+	script( src='highlighters/Rainbow/language/css.js' )
+	script( src='highlighters/Rainbow/language/generic.js' )
+	script( src='highlighters/Rainbow/language/html.js' )
+	script( src='highlighters/Rainbow/language/javascript.js' )
+	script( src='highlighters/Rainbow/language/php.js' )

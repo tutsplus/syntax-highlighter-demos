@@ -1,0 +1,86 @@
+extends ./layout.jade
+
+block title
+	| Highlight.js - Railscasts Style
+
+block highlighter
+	script( src='highlighters/highlightjs/highlight.pack.js' )
+	link( href='highlighters/highlightjs/styles/railscasts.css', rel='stylesheet' type='text/css' )
+
+block content
+	h1 
+		block title
+	p Website: 
+		a(href='https://highlightjs.org/', target="_target") https://highlightjs.org/
+
+	h2 HTML
+
+	include ../code_examples/example_html.jade
+	pre
+		code( class='language-html' ) 
+			| #{HTML}
+
+	h2 JavaScript
+
+	pre
+		code( class='language-javascript' )
+			include ../code_examples/example.js
+
+	h2 CSS
+
+	pre
+		code( class='language-css' )
+			include ../code_examples/example.css
+
+	h2 PHP
+
+	include ../code_examples/example_php.jade
+	pre
+		code( class='language-php' )
+			| #{PHP}
+
+	h2 Markdown
+
+	pre
+		code( class='language-markdown' )
+			include ../code_examples/example.md
+
+	h2 CoffeeScript
+
+	pre
+		code( class='language-coffeescript' )
+			include ../code_examples/example.coffee
+
+	h2 Handlebars
+
+	include ../code_examples/example_hbs.jade
+	pre
+		code( class='language-handlebars' )
+			| #{hbs}
+
+	h2 Jade
+
+	pre
+		code( class='language-jade' )
+			include ../code_examples/example_jade.txt
+
+	h2 LESS
+
+	pre
+		code( class='language-less' )
+			include ../code_examples/example.less
+
+	h2 Sass
+
+	pre
+		code( class='language-scss' )
+			include ../code_examples/example.scss
+
+	h2 Stylus
+
+	pre
+		code( class='language-stylus' )
+			include ../code_examples/example.styl
+
+	script.
+		hljs.initHighlightingOnLoad();

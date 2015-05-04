@@ -1,0 +1,83 @@
+extends ./layout.jade
+
+block title
+	| SHJS Demo - Navy Theme
+
+block highlighter
+	script( src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js' )
+	script( src='highlighters/SHJS/sh_main.min.js' )
+	script( src='highlighters/SHJS/lang/sh_css.js' )
+	script( src='highlighters/SHJS/lang/sh_html.js' )
+	script( src='highlighters/SHJS/lang/sh_javascript.js' )
+	script( src='highlighters/SHJS/lang/sh_javascript_dom.js' )
+	script( src='highlighters/SHJS/lang/sh_php.js' )
+	link( href='highlighters/SHJS/css/sh_navy.css', rel='stylesheet' type='text/css' )
+
+block content
+	h1 
+		block title
+	p Website: 
+		a(href='http://shjs.sourceforge.net/', target="_target") http://shjs.sourceforge.net/
+
+	h2 HTML
+
+	include ../code_examples/example_html.jade
+	pre( class='sh_html' ) 
+		| #{HTML}
+
+	h2 JavaScript
+
+	pre( class='sh_javascript' )
+		include ../code_examples/example.js
+
+	h2 CSS
+
+	pre( class='sh_css' )
+		include ../code_examples/example.css
+
+	h2 PHP
+
+	include ../code_examples/example_php.jade
+	pre( class='sh_php' )
+		| #{PHP}
+
+	h2 Markdown
+
+	pre( class='sh_html' )
+		include ../code_examples/example.md
+
+	h2 CoffeeScript
+
+	pre( class='sh_javascript' )
+		include ../code_examples/example.coffee
+
+	h2 Handlebars
+
+	include ../code_examples/example_hbs.jade
+	pre( class='sh_html' )
+		| #{hbs}
+
+	h2 Jade
+
+	pre( class='sh_html' )
+		include ../code_examples/example_jade.txt
+
+	h2 LESS
+
+	pre( class='sh_css' )
+		include ../code_examples/example.less
+
+	h2 Sass
+
+	pre( class='sh_css' )
+		include ../code_examples/example.scss
+
+	h2 Stylus
+
+	pre( class='sh_css' )
+		include ../code_examples/example.styl
+
+	script.
+		$( document ).ready(function() {
+			sh_highlightDocument();
+		});

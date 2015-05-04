@@ -1,0 +1,14 @@
+@import "somestyle.css"
+
+body {
+	background: white;
+}
+
+.wrapper {
+	background: #F88;
+	color: #454545;
+}
+
+.box::after {
+	content: "...";
+}

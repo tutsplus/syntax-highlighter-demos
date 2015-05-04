@@ -1,0 +1,80 @@
+extends ./layout.jade
+
+block title
+	| SyntaxHighlighter Demo - RDark Theme
+
+block highlighter
+	script( src='highlighters/SyntaxHighlighter/shCore.js' )
+	script( src='highlighters/SyntaxHighlighter/shBrushJScript.js' )
+	script( src='highlighters/SyntaxHighlighter/shBrushXml.js' )
+	script( src='highlighters/SyntaxHighlighter/shBrushCss.js' )
+	script( src='highlighters/SyntaxHighlighter/shBrushPhp.js' )
+	link( href='highlighters/SyntaxHighlighter/shCore.css', rel='stylesheet' type='text/css' )
+	link( href='highlighters/SyntaxHighlighter/shThemeRDark.css', rel='stylesheet' type='text/css' )
+
+block content
+	h1 
+		block title
+	p Website: 
+		a(href='http://alexgorbatchev.com/SyntaxHighlighter/', target="_target") http://alexgorbatchev.com/SyntaxHighlighter/
+
+	h2 HTML
+
+	include ../code_examples/example_html.jade
+	pre( class='brush: xml' ) 
+		| #{HTML}
+
+	h2 JavaScript
+
+	pre( class='brush: js' )
+		include ../code_examples/example.js
+
+	h2 CSS
+
+	pre( class='brush: css' )
+		include ../code_examples/example.css
+
+	h2 PHP
+
+	include ../code_examples/example_php.jade
+	pre( class='brush: php; html-script: true' )
+		| #{PHP}
+
+	h2 Markdown
+
+	pre( class='brush: xml' )
+		include ../code_examples/example.md
+
+	h2 CoffeeScript
+
+	pre( class='brush: js' )
+		include ../code_examples/example.coffee
+
+	h2 Handlebars
+
+	include ../code_examples/example_hbs.jade
+	pre( class='brush: xml' )
+		| #{hbs}
+
+	h2 Jade
+
+	pre( class='brush: xml' )
+		include ../code_examples/example_jade.txt
+
+	h2 LESS
+
+	pre( class='brush: css' )
+		include ../code_examples/example.less
+
+	h2 Sass
+
+	pre( class='brush: css' )
+		include ../code_examples/example.scss
+
+	h2 Stylus
+
+	pre( class='brush: css' )
+		include ../code_examples/example.styl
+
+	script.
+		SyntaxHighlighter.all()

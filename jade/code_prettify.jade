@@ -1,0 +1,71 @@
+extends ./layout.jade
+
+block title
+	| Google Code Prettify Demo - Default Theme
+
+block highlighter
+	script( src='https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js' )
+
+block content
+	h1 
+		block title
+	p Website: 
+		a(href='https://github.com/google/code-prettify', target="_target") https://github.com/google/code-prettify
+
+	h2 HTML
+
+	include ../code_examples/example_html.jade
+	pre( class='prettyprint' ) 
+		| #{HTML}
+
+	h2 JavaScript
+
+	pre( class='prettyprint' )
+		include ../code_examples/example.js
+
+	h2 CSS
+
+	pre( class='prettyprint' )
+		include ../code_examples/example.css
+
+	h2 PHP
+
+	include ../code_examples/example_php.jade
+	pre( class='prettyprint' )
+		| #{PHP}
+
+	h2 Markdown
+
+	pre( class='prettyprint' )
+		include ../code_examples/example.md
+
+	h2 CoffeeScript
+
+	pre( class='prettyprint' )
+		include ../code_examples/example.coffee
+
+	h2 Handlebars
+
+	include ../code_examples/example_hbs.jade
+	pre( class='prettyprint' )
+		| #{hbs}
+
+	h2 Jade
+
+	pre( class='prettyprint' )
+		include ../code_examples/example_jade.txt
+
+	h2 LESS
+
+	pre( class='prettyprint' )
+		include ../code_examples/example.less
+
+	h2 Sass
+
+	pre( class='prettyprint' )
+		include ../code_examples/example.scss
+
+	h2 Stylus
+
+	pre( class='prettyprint' )
+		include ../code_examples/example.styl

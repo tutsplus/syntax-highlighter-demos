@@ -1,0 +1,1 @@
+- var PHP = '<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>\n<article>\n<h1><?php the_title(); ?></h1>\n<?php the_content(); ?>\n</article>\n<?php endwhile; endif; ?>'

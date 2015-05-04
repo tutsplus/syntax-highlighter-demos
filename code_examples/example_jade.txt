@@ -1,0 +1,5 @@
+- var title = "Example Jade";
+header
+	h1 #{title}
+main.style
+	p Some text
